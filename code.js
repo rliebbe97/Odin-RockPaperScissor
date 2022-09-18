@@ -44,13 +44,13 @@ function game(buttonClicked){
     if (computerScore < 5 && humanScore < 5){
         playRound(buttonClicked, getComputerChoice());
         document.getElementById("robot").innerHTML = "robot score: " + computerScore;
-        document.getElementById("human").innerHTML = "robot score: " + humanScore;
+        document.getElementById("human").innerHTML = "your score: " + humanScore;
     }
-    else if (computerScore = 5)
+    else if (computerScore = 5 && humanScore < 5)
     {
         document.getElementById("finalDecision").innerHTML = "Robot wins";
     }
-    else{
+    else if (humanScore = 5){
         document.getElementById("finalDecision").innerHTML = "human wins";
     }
 }
